@@ -8,15 +8,19 @@
   <title>Expense Tracker</title>
   <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
-<body>
 
+<body>
   <h1>Expense Tracker</h1>
   <form id="expense-form">
     <label for="expense-title">Title:</label>
     <input type="text" id="expense-title" name="expense-title" required>
+    <label for="expense-cost">Cost:</label>
+    <input type="number" id="expense-cost" name="expense-cost" required>
+    <button type="submit"> Add Expense</button>
   </form>
-
-
+  <div id="chart-container">
+      <svg width="500" height="500"></svg>
+  </div>
+  <script src="main.js"></script>
 </body>
-
 </html>
