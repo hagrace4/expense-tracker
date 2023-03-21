@@ -75,6 +75,16 @@ function updateChart() {
   wedges.select('text')
     .attr('transform', d => `translate(${arc.centroid(d)})`)
     .text(d => d.data.title);
+
+  // Update item name and cost to list
+  const list = document.getElementById('item-list');
+  list.innerHTML = '';
+  expenses.forEach(expense => {
+    const item = document.createElement('li');
+    item.innerHTML = `${expense.title} - $${expense.cost}`;
+    list.appendChild(item);
+  })
+
 }
 
 // Handle the form submission to add a new expense
